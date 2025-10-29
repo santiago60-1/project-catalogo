@@ -1,0 +1,14 @@
+2025-10-28T19:54:01.063-05:00  INFO 198304 --- [catalog-dev] [main] c.t.catalog.CatalogApplicationTests      : Starting CatalogApplicationTests using Java 17.0.16 with PID 198304 (started by Coder in /home/Coder/Vídeos/NO SEA SAPO Y NO ELIMINE ESTA VERGA/catalog)
+2025-10-28T19:54:01.064-05:00 DEBUG 198304 --- [catalog-dev] [main] c.t.catalog.CatalogApplicationTests      : Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-10-28T19:54:01.065-05:00  INFO 198304 --- [catalog-dev] [main] c.t.catalog.CatalogApplicationTests      : The following 1 profile is active: "dev"
+2025-10-28T19:54:02.049-05:00  INFO 198304 --- [catalog-dev] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-10-28T19:54:02.084-05:00  INFO 198304 --- [catalog-dev] [main] c.t.catalog.CatalogApplicationTests      : Started CatalogApplicationTests in 1.24 seconds (process running for 1.818)
+2025-10-28T19:54:02.527-05:00  INFO 198304 --- [catalog-dev] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.tiquetera.catalog.controller.EventControllerTest]: EventControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-28T19:54:02.548-05:00  INFO 198304 --- [catalog-dev] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.tiquetera.catalog.CatalogApplication for test class com.tiquetera.catalog.controller.EventControllerTest
+2025-10-28T19:54:02.574-05:00  INFO 198304 --- [catalog-dev] [main] c.t.c.controller.EventControllerTest     : Starting EventControllerTest using Java 17.0.16 with PID 198304 (started by Coder in /home/Coder/Vídeos/NO SEA SAPO Y NO ELIMINE ESTA VERGA/catalog)
+2025-10-28T19:54:02.575-05:00 DEBUG 198304 --- [catalog-dev] [main] c.t.c.controller.EventControllerTest     : Running with Spring Boot v3.5.7, Spring v6.2.12
+2025-10-28T19:54:02.575-05:00  INFO 198304 --- [catalog-dev] [main] c.t.c.controller.EventControllerTest     : The following 1 profile is active: "dev"
+2025-10-28T19:54:02.872-05:00  INFO 198304 --- [catalog-dev] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-28T19:54:02.873-05:00  INFO 198304 --- [catalog-dev] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-28T19:54:02.874-05:00  INFO 198304 --- [catalog-dev] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-10-28T19:54:02.886-05:00  INFO 198304 --- [catalog-dev] [main] c.t.c.controller.EventControllerTest     : Started EventControllerTest in 0.335 seconds (process running for 2.62)

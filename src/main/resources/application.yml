@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: catalog
+  profiles:
+    active: dev
+    
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    operationsSorter: method
+    tryItOutEnabled: true
+    filter: true
+    tagsSorter: alpha
+    
+logging:
+  level:
+    root: INFO
+    com.tiquetera: DEBUG
+  file:
+    name: ./logs/catalog.log
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

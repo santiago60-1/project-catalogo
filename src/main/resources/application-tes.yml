@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: catalog-test
+
+server:
+  port: 8081
+
+logging:
+  level:
+    com.tiquetera: DEBUG
+    
+# Test specific settings
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false

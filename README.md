@@ -172,9 +172,3 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 
 - Santiago Ortega
 - Contact: santiago@59782@gmail.com
-
-# catalog-service
-# catalogo
-# catalogo
-# catalogo
-# project-catalogo

@@ -1,76 +1,76 @@
-# Tiquetera Catalog API
+## Tiquetera Catalog API
 
-API REST para la gestión de eventos y venues (locaciones) del sistema Tiquetera.
+REST API for managing events and venues in the Tiquetera system.
 
-## 📋 Tabla de Contenidos
-1. [Características](#características)
-2. [Requisitos](#requisitos)
-3. [Instalación](#instalación)
-4. [Uso](#uso)
+## 📋 Table of Contents
+1. [Features](#features)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Usage](#usage)
 5. [API Endpoints](#api-endpoints)
-6. [Documentación](#documentación)
-7. [Pruebas](#pruebas)
-8. [Solución de Problemas](#solución-de-problemas)
+6. [Documentation](#documentation)
+7. [Tests](#tests)
+8. [Troubleshooting](#troubleshooting)
 
-## ✨ Características
+## ✨ Features
 
-- Gestión completa de Venues (CRUD)
-- Gestión completa de Eventos (CRUD)
-- Validación de datos
-- Documentación OpenAPI/Swagger
-- Persistencia en memoria
-- Manejo global de errores
+- Full CRUD for Venues
+- Full CRUD for Events
+- Input validation
+- OpenAPI / Swagger documentation
+- In-memory persistence (for demo/testing)
+- Global error handling
 
-## 📦 Requisitos
+## 📦 Requirements
 
-- Java 17 o superior
-- Maven 3.9+ (incluido wrapper mvnw)
-- Puerto 8080 disponible (configurable)
+- Java 17 or newer
+- Maven 3.9+ (wrapper `mvnw` included)
+- Port 8080 available (configurable)
 
-## 🚀 Instalación
+## 🚀 Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 ```bash
 git clone https://github.com/tiquetera/catalog.git
 cd catalog
 ```
 
-2. Verificar permisos del wrapper Maven:
+2. Ensure the Maven wrapper is executable:
 ```bash
 chmod +x ./mvnw
 ```
 
-3. Compilar el proyecto:
+3. Build the project:
 ```bash
 ./mvnw clean package
 ```
 
-## 💻 Uso
+## 💻 Usage
 
-### Iniciar la aplicación
+### Start the application
 
-Usando Maven wrapper (recomendado):
+Using the Maven wrapper (recommended):
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Usando el JAR empaquetado:
+Using the packaged JAR:
 ```bash
 java -jar target/catalog-0.0.1-SNAPSHOT.jar
 ```
 
-### Configuración
+### Configuration
 
-#### Perfiles disponibles
-- `dev`: Desarrollo local
-- `tes`: Pruebas
+#### Available profiles
+- `dev`: Local development
+- `tes`: Testing
 
-Para ejecutar con un perfil específico:
+To run with a specific profile:
 ```bash
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
-#### Cambiar puerto
+#### Change port
 ```bash
 ./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
 ```
@@ -79,90 +79,98 @@ Para ejecutar con un perfil específico:
 
 ### Venues
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/venues` | Crear venue |
-| GET | `/venues` | Listar venues |
-| GET | `/venues/{id}` | Obtener venue por ID |
-| PUT | `/venues/{id}` | Actualizar venue |
-| DELETE | `/venues/{id}` | Eliminar venue |
+| POST   | `/venues` | Create a venue |
+| GET    | `/venues` | List venues |
+| GET    | `/venues/{id}` | Get venue by ID |
+| PUT    | `/venues/{id}` | Update venue |
+| DELETE | `/venues/{id}` | Delete venue |
 
 ### Events
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| POST | `/events` | Crear evento |
-| GET | `/events` | Listar eventos |
-| GET | `/events/{id}` | Obtener evento por ID |
-| PUT | `/events/{id}` | Actualizar evento |
-| DELETE | `/events/{id}` | Eliminar evento |
+| POST   | `/events` | Create an event |
+| GET    | `/events` | List events |
+| GET    | `/events/{id}` | Get event by ID |
+| PUT    | `/events/{id}` | Update event |
+| DELETE | `/events/{id}` | Delete event |
 
-## 📖 Documentación
+## 📖 Documentation
 
-La documentación detallada está disponible en:
+Detailed documentation is available at:
 
-1. Swagger UI (cuando la aplicación está corriendo):
-   - http://localhost:8080/swagger-ui.html
+1. Swagger UI (when the app is running):
+   - Swagger UI: http://localhost:8080/swagger-ui.html (or http://localhost:8080/swagger-ui/index.html)
+   - OpenAPI JSON: http://localhost:8080/v3/api-docs
 
-2. Documentación estática:
-   - [Guía de Desarrollo](docs/development-guide.md)
-   - [Ejemplos de API](docs/api-examples.md)
-   - [Guía de Despliegue](docs/deployment-guide.md)
+2. Static docs:
+   - [Development Guide](docs/development-guide.md)
+   - [API Examples](docs/api-examples.md)
+   - [Deployment Guide](docs/deployment-guide.md)
 
-### Estructura de la Documentación
+### Documentation structure
 ```
 docs/
-├── images/           # Capturas y diagramas
-│   ├── api/         # Ejemplos de API
-│   ├── setup/       # Guías de instalación
-│   └── tests/       # Resultados de pruebas
-├── api-examples.md   # Ejemplos de uso de API
-├── development-guide.md # Guía para desarrolladores
-└── deployment-guide.md  # Guía de despliegue
+├── images/           # Screenshots and diagrams
+│   ├── api/         # API examples
+│   ├── setup/       # Setup guides
+│   └── tests/       # Test results
+├── api-examples.md   # API usage examples
+├── development-guide.md # Developer guide
+└── deployment-guide.md  # Deployment guide
 ```
 
-## 🧪 Pruebas
+## 🧪 Tests
 
-Ejecutar todas las pruebas:
+Run all tests:
 ```bash
 ./mvnw test
 ```
 
-Pruebas específicas:
+Run a specific test class:
 ```bash
 ./mvnw test -Dtest=EventControllerTest
 ```
 
-## 🔧 Solución de Problemas
+## 🔧 Troubleshooting
 
 ### Logs
-Los logs se encuentran en:
-- Desarrollo: `./logs/catalog.log`
-- Consola: Nivel INFO por defecto
+Logs are stored at:
+- Development: `./logs/catalog.log`
+- Console: default level INFO
 
-### Problemas Comunes
+### Common Issues
 
-1. Puerto en uso:
+1. Port already in use:
 ```bash
+# start on an alternate port (example 8081)
 ./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"
 ```
 
-2. Limpiar proyecto:
+Or set the environment variable when running the packaged JAR:
+```bash
+java -jar target/catalog-0.0.1-SNAPSHOT.jar --server.port=8081
+```
+
+2. Clean the project:
 ```bash
 ./mvnw clean
 ```
 
-3. Verificar dependencias:
+3. Check dependencies:
 ```bash
 ./mvnw dependency:tree
 ```
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia Apache 2.0 - ver el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Equipo
+## 👥 Team
 
 - Santiago Ortega
-- Contacto: santiago@59782@gmail.com# catalog-service
+- Contact: santiago@59782@gmail.com
+
 # catalog-service
